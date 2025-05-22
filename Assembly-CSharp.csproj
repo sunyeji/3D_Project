@@ -45,8 +45,11 @@
     <Analyzer Include="C:\Unity\Unity 2022.3.17f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Player\PlayerCondition.cs" />
     <Compile Include="Assets\Externals\Blink\Art\Animals\Stylized\Demo_Animals\DemoData\AnimationDemo.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObject\ItemData.cs" />
     <Compile Include="Assets\Scripts\Player\Player.cs" />
+    <Compile Include="Assets\Scripts\Item\ItemObject.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
     <Compile Include="Assets\Scripts\UI\UiCondition.cs" />
     <Compile Include="Assets\Scripts\UI\Condition.cs" />
