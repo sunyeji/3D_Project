@@ -96,4 +96,15 @@ public class PlayerController : MonoBehaviour
             
             return false;  // 4개 모두 닿지 않았다면 공중에 떠 있다고 판단
         }
+        
+        private void Awake()
+        {
+            rb = GetComponent<Rigidbody>();
+        }
+
+        public void JumpByPad(float jumpPower)
+        {
+            rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
+            rb.AddForce(Vector3.up * jumpPower, ForceMode.Impulse);
+        }
 }

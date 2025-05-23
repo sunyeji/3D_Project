@@ -11,4 +11,13 @@ public class Player : MonoBehaviour
         PlayerManager.Instance.Player = this;  
         controller = GetComponent<PlayerController>();
     }
+    
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("JumpPad"))
+        {
+            controller.JumpByPad(10f); // 자동 점프
+        }
+    }
 }
+
