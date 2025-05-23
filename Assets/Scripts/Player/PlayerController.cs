@@ -97,14 +97,14 @@ public class PlayerController : MonoBehaviour
             return false;  // 4개 모두 닿지 않았다면 공중에 떠 있다고 판단
         }
         
-        private void Awake()
+        private void Awake() 
         {
-            rb = GetComponent<Rigidbody>();
+            rb = GetComponent<Rigidbody>(); // Rigidbody 컴포넌트를 가져와서 rb에 저장
         }
 
         public void JumpByPad(float jumpPower)
         {
-            rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
-            rb.AddForce(Vector3.up * jumpPower, ForceMode.Impulse);
+            rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z); // y축 속도를 0으로 초기화해서 기존 점프/낙하 영향 제거
+            rb.AddForce(Vector3.up * jumpPower, ForceMode.Impulse);      // 위 방향으로 즉시 점프력(Impulse) 적용
         }
 }

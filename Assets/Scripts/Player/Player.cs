@@ -19,5 +19,7 @@ public class Player : MonoBehaviour
             controller.JumpByPad(10f); // 자동 점프
         }
     }
+    
+    
 }
 
